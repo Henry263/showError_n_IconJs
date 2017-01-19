@@ -9,12 +9,12 @@ For an example you have some HTML element that is showing an icon and border aro
 ### Example scenario 1 (Border around the element)
  - Directly attach an element to function to display default error as a border.
  <br />
+ 
  ```
  $("div").showErrFunc(); or _showErrFunc(this);
  ```
  - It will look like this.
  
-  
 ### Example scenario 2 (Default error icon next to the element)
  - Directly attach an element to function to display default error icon.
  <br />
@@ -26,8 +26,8 @@ For an example you have some HTML element that is showing an icon and border aro
   
 ### Example scenario 3 (Default error info icon next to the element)
  - Directly attach an element to function to display default error info icon.
- 
  <br />
+ 
  ```
  $("textarea").ErrIcon(); or _InfoIcon($element);
  ```
