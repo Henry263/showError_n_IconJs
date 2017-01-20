@@ -76,3 +76,17 @@ For an example you have some HTML element that is showing an icon and border aro
   _ErrIcon($(this), 'fa-info-circle', "_xsmall", "blue")
   ```
  - It will look like this.
+ 
+### Example scenario 5 (All in one Border + icon)
+ - Passing an element to function to display custom border with custom values.
+ <br />
+ 
+ ```
+_customErrStyle(element, _borderColor, _iconColor, _borderSize, _iconSize, _iconName)
+ ```
+ - example 
+ 
+  ```
+_customErrStyle(this, null, "orange", "3px", null, "null")
+  ```
+ - It will look like this.
