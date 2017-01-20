@@ -71,6 +71,7 @@ For an example you have some HTML element that is showing an icon and border aro
  // _iconName: accept any classname of font from http://fontawesome.io/icons/  eg. 'fa-info-circle'
  ```
  - example 
+ 
   ```
   _ErrIcon($(this), 'fa-info-circle', "_xsmall", "blue")
   ```
