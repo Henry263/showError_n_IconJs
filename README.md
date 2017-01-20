@@ -46,7 +46,7 @@ For an example you have some HTML element that is showing an icon and border aro
  ```
  - It will look like this.
 
-#### example 
+#### - example 
   ```
   _showErrFunc($element, 'green', '4px') 
   _showErrFunc($element, '#b91717', '1.8rem') // '1.8rem' will be converted to 1.8px
