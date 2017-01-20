@@ -46,14 +46,14 @@ For an example you have some HTML element that is showing an icon and border aro
  ```
  - It will look like this.
  
-  - #example 
+  - example 
   ```
   _showErrFunc($element, 'green', '4px') 
   _showErrFunc($element, '#b91717', '1.8rem') // '1.8rem' will be converted to 1.8px
   ```
   - It will look like this.
   
-  - #example - if you want to apply only one property
+  - example - if you want to apply only one property
   ```
   _showErrFunc(this, 'green', null)  // Apply default border size
   _showErrFunc($(this), null, '1.8rem') // '1.8rem' will be converted to 1.8px and apply default border color.
@@ -70,7 +70,7 @@ For an example you have some HTML element that is showing an icon and border aro
  // _iconSize: Border size (Accept in px format)(Default sizes: "_xsmall", "_medium", "_large", "_xlarge")
  // _iconName: accept any classname of font from http://fontawesome.io/icons/  eg. 'fa-info-circle'
  ```
-  - #example 
+  - example 
   ```
   _ErrIcon($(this), 'fa-info-circle', "_xsmall", "blue")
   ```
