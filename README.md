@@ -51,9 +51,9 @@ For an example you have some HTML element that is showing an icon and border aro
   _showErrFunc($element, 'green', '4px') 
   _showErrFunc($element, '#b91717', '1.8rem') // '1.8rem' will be converted to 1.8px
   ```
-  - It will look like this.
+ - It will look like this.
   
-  - example - if you want to apply only one property
+ - example - if you want to apply only one property
   ```
   _showErrFunc(this, 'green', null)  // Apply default border size
   _showErrFunc($(this), null, '1.8rem') // '1.8rem' will be converted to 1.8px and apply default border color.
