@@ -29,7 +29,7 @@ For an example you have some HTML element that is showing an icon and border aro
  <br />
  
  ```
- $("textarea").ErrIcon(); or _InfoIcon($element);
+ $("input").InfoIcon(); or _InfoIcon($element);
  ```
  - It will look like this.
 
@@ -49,7 +49,8 @@ For an example you have some HTML element that is showing an icon and border aro
  - example 
   ```
   _showErrFunc($element, 'green', '4px') 
-  _showErrFunc($element, '#b91717', '1.8rem') // '1.8rem' will be converted to 1.8px
+  _showErrFunc($element, 'green', null)
+  _showErrFunc($("input"), 'orange', '3.8rem'); // '1.8rem' will be converted to 1.8px
   ```
  - It will look like this.
   
@@ -73,7 +74,9 @@ For an example you have some HTML element that is showing an icon and border aro
  - example 
  
   ```
-  _ErrIcon($(this), 'fa-info-circle', "_xsmall", "blue")
+  _ErrIcon($("input"), 'fa-info-circle', "24px", "blue");
+  _ErrIcon($("input"), 'fa-info-circle', null, "blue");
+  _ErrIcon($("input"), 'fa-info-circle', "_medium", "blue");
   ```
  - It will look like this.
  
@@ -87,6 +90,7 @@ _customErrStyle(element, _borderColor, _iconColor, _borderSize, _iconSize, _icon
  - example 
  
   ```
-_customErrStyle(this, null, "orange", "3px", null, "null")
+_customErrStyle($("input"), "blue", "orange", null, null, "bell");
+_customErrStyle($("input"), "blue", "orange", null, null, "fa-bell");
   ```
  - It will look like this.
