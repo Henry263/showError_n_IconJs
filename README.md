@@ -1,5 +1,5 @@
 # showError_n_iconJs
-This repo is containing JS library where you can call function or attach method to element to appear the validation error to any element.
+This repo is containing JS library where you can call function or attach method to element to appear the border around the element and icon next to the element.
  <br />
 ## Purpose of showError_n_iconJs
 For an example you have some HTML element that is showing an icon and border around the element for validation purpose or for any other purpose you can call the function or method that will apply automatically border and display icon for that element.
@@ -15,6 +15,8 @@ For an example you have some HTML element that is showing an icon and border aro
  ```
  - It will look like this.
  
+ ![default border](https://github.com/Henry263/showError_n_IconJs/blob/master/images/defaultborder.png?raw=true "default border")
+ 
 ### Example scenario 2 (Default error icon next to the element)
  - Directly attach an element to function to display default error icon.
  <br />
@@ -23,6 +25,8 @@ For an example you have some HTML element that is showing an icon and border aro
  $("textarea").ErrIcon(); or _ErrIcon($element);
  ```
  - It will look like this.
+ 
+ ![default icon](https://github.com/Henry263/showError_n_IconJs/blob/master/images/defaultIcon.png?raw=true "default icon")
   
 ### Example scenario 3 (Default error info icon next to the element)
  - Directly attach an element to function to display default error info icon.
@@ -32,6 +36,9 @@ For an example you have some HTML element that is showing an icon and border aro
  $("input").InfoIcon(); or _InfoIcon($element);
  ```
  - It will look like this.
+
+ ![default icon](https://github.com/Henry263/showError_n_IconJs/blob/master/images/defaultInfoIcon.png?raw=true "default icon")
+
 
 ## Custom value functions
 
@@ -44,8 +51,6 @@ For an example you have some HTML element that is showing an icon and border aro
  // _bColor : border color
  // _bSize: Border size (Accept in px format)
  ```
- - It will look like this.
-
  - example 
   ```
   _showErrFunc($element, 'green', '4px') 
@@ -53,44 +58,50 @@ For an example you have some HTML element that is showing an icon and border aro
   _showErrFunc($("input"), 'orange', '3.8rem'); // '1.8rem' will be converted to 1.8px
   ```
  - It will look like this.
+ 
+  ![custom border](https://github.com/Henry263/showError_n_IconJs/blob/master/images/customborder.png?raw=true "custom border")
   
  - example - if you want to apply only one property
   ```
   _showErrFunc(this, 'green', null)  // Apply default border size
   _showErrFunc($(this), null, '1.8rem') // '1.8rem' will be converted to 1.8px and apply default border color.
   ```
- - It will look like this.
-
 ### Example scenario 5 (Custom icon properties)
  - Passing an element to function to display custom border with custom values.
  <br />
  
  ```
- _ErrIcon($element, _iconName, _iconSize, _iconColor)
+ _ErrIcon($element, _iconName, _iconSize, _iconColor, _position)
  // _iconColor : border color
  // _iconSize: Border size (Accept in px format)(Default sizes: "_xsmall", "_medium", "_large", "_xlarge")
  // _iconName: accept any classname of font from http://fontawesome.io/icons/  eg. 'fa-info-circle'
+ // _position: left, right, top and bottom (Allow yo to select the position of icon
  ```
  - example 
  
   ```
-  _ErrIcon($("input"), 'fa-info-circle', "24px", "blue");
-  _ErrIcon($("input"), 'fa-info-circle', null, "blue");
-  _ErrIcon($("input"), 'fa-info-circle', "_medium", "blue");
+  _ErrIcon($("input"), 'fa-info-circle', "_medium", "blue", null);
+  _ErrIcon($("input"), 'fa-info-circle', "24px", "blue", null);
+  _ErrIcon($("input"), 'fa-info-circle', null, "blue", "top");
+  _ErrIcon($("input"), 'fa-info-circle', "_medium", "blue", "left");
   ```
  - It will look like this.
+ 
+ ![custom icon](https://github.com/Henry263/showError_n_IconJs/blob/master/images/customIcon.png?raw=true "custom icon")
  
 ### Example scenario 5 (All in one Border + icon)
  - Passing an element to function to display custom border with custom values.
  <br />
  
  ```
-_customErrStyle(element, _borderColor, _iconColor, _borderSize, _iconSize, _iconName)
+_customErrStyle(element, _borderColor, _iconColor, _borderSize, _iconSize, _iconName, _position)
  ```
  - example 
  
   ```
-_customErrStyle($("input"), "blue", "orange", null, null, "bell");
-_customErrStyle($("input"), "blue", "orange", null, null, "fa-bell");
+_customErrStyle($("input"), "blue", "orange", null, null, "bell", null);
+_customErrStyle($("input"), "blue", "orange", null, null, "fa-bell", "right");
   ```
  - It will look like this.
+ 
+ ![custom iconborder](https://github.com/Henry263/showError_n_IconJs/blob/master/images/custombordernicon.png?raw=true "custom iconborder")
