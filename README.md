@@ -4,6 +4,11 @@ This repo is containing JS library where you can call function or attach method 
 ## Purpose of showError_n_iconJs
 For an example you have some HTML element that is showing an icon and border around the element for validation purpose or for any other purpose you can call the function or method that will apply automatically border and display icon for that element.
 
+## How to import in your project
+Use this cdn to import the functionality 
+```
+ - https//cdn.jsdelivr.net/errornicon/2.0.0/errornicon.min.js
+```
 ## Default functions
 
 ### Example scenario 1 (Border around the element)
