@@ -6,6 +6,9 @@
 
 $(document).ready(function () {
 
+    // Example
+    //_ErrIcon($("input"), 'fa-info-circle', "_medium", "orange", "left");
+
     $("head").append("<link>");
     var css = $("head").children(":last");
     css.attr({
@@ -70,7 +73,7 @@ $(document).ready(function () {
      //http://fontawesome.io/icons/
      
      *******************************/
-    _ErrIcon($("input"), 'fa-info-circle', "_medium", "blue");
+
     /*========= start of code : Custom value of border error ============*/
 
     function _showErrFunc($element, _bColor, _bSize) {
@@ -125,11 +128,12 @@ $(document).ready(function () {
 
     /*========= start of code : Custom value of Error icon ============*/
 
-    function _ErrIcon($element, _iconName, _iconSize, _iconColor) {
+    function _ErrIcon($element, _iconName, _iconSize, _iconColor, _position) {
         //$errorSpan = $("<span class='icon_pos icon_pos_top'><i class='icon_specs fa fa-exclamation-triangle' aria-hidden='true'></i><span/>");// +
         var $errorSpan;
         var icon_class = _iconName;
 
+        // Check which icon class is there.
         if (icon_class == undefined)
         {
             icon_class = "fa-exclamation-triangle";
@@ -155,8 +159,8 @@ $(document).ready(function () {
 
         }
         $errorSpan = $("<span class='icon_pos icon_pos_top'><i class='icon_specs fa " + icon_class + "' aria-hidden='true'></i><span/>");// +
-        $errorSpan.insertAfter($element);
-
+        var $errorSpanDiv = $("<div class='top_btm_pos'><span class='icon_pos'><i class='icon_specs fa " + icon_class + "' aria-hidden='true'></i><span/></div>");// +
+        // Check the font size.
         var font_size_prop = 'font-size';
         var default_font_size = '16px';
         if (_iconSize == undefined)
@@ -199,6 +203,8 @@ $(document).ready(function () {
                 default_font_size = _iconSize;
             }
         }
+
+        // Check the icon color
         if (_iconColor == undefined)
         {
             _iconColor = "#b91717";
@@ -211,20 +217,61 @@ $(document).ready(function () {
         {
             _iconColor = _iconColor;
         }
-        $element.next().find("i").css('color', _iconColor);
-        $element.next().find("i").css(font_size_prop, default_font_size);
+        
+         // Check icon position 
+
+        if (_position == undefined)
+        {
+            $errorSpan.insertAfter($element);
+        }
+        else if (_position == null)
+        {
+            $errorSpan.insertAfter($element);
+        }
+        else
+        {
+            if (_position === "right")
+            {
+                $errorSpan.insertAfter($element);
+                $element.next().find("i").css('color', _iconColor);
+                $element.next().find("i").css(font_size_prop, default_font_size);
+            }
+            else if (_position === "left")
+            {
+                $errorSpan.insertBefore($element);
+                $element.prev().find("i").css('color', _iconColor);
+                $element.prev().find("i").css(font_size_prop, default_font_size);
+            }
+            else if (_position === "top")
+            {
+                $errorSpanDiv.insertBefore($element);
+                $element.prev().find("i").css('color', _iconColor);
+                $element.prev().find("i").css(font_size_prop, default_font_size);
+            }
+            else if (_position === "bottom")
+            {
+                $errorSpanDiv.insertAfter($element);
+                $element.next().find("i").css('color', _iconColor);
+                $element.next().find("i").css(font_size_prop, default_font_size);
+            }
+            else
+            {
+                $errorSpan.insertAfter($element);
+            }
+        }
+        
     }
     /*======================= Code End ===========================*/
 
     /*========= Start of code: Custom error css ===================*/
 
-    function _customErrStyle(element, _borderColor, _iconColor, _borderSize, _iconSize, _iconName)
+    function _customErrStyle(element, _borderColor, _iconColor, _borderSize, _iconSize, _iconName, _position)
     {
         var $element = element;
         _bColor = _borderColor;
         _bSize = _borderSize;
         _showErrFunc($element, _bColor, _bSize);
-        _ErrIcon($element, _iconName, _iconSize, _iconColor);
+        _ErrIcon($element, _iconName, _iconSize, _iconColor, _position);
     }
 
     /*=============================================================*/

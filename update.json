@@ -3,6 +3,6 @@
   "name": "errornicon",
   "repo": "Henry263/showError_n_IconJs",
   "files": {
-    "include": ["showErrnIcon.js", "showErrnIcon.min.js"]
+    "include": ["errornicon.css", "errornicon.min.js"]
   }
 }
