@@ -15,6 +15,8 @@ For an example you have some HTML element that is showing an icon and border aro
  ```
  - It will look like this.
  
+ ![default border](https://github.com/Henry263/showError_n_IconJs/blob/master/images/defaultborder.png?raw=true "default border")
+ 
 ### Example scenario 2 (Default error icon next to the element)
  - Directly attach an element to function to display default error icon.
  <br />
@@ -66,17 +68,19 @@ For an example you have some HTML element that is showing an icon and border aro
  <br />
  
  ```
- _ErrIcon($element, _iconName, _iconSize, _iconColor)
+ _ErrIcon($element, _iconName, _iconSize, _iconColor, _position)
  // _iconColor : border color
  // _iconSize: Border size (Accept in px format)(Default sizes: "_xsmall", "_medium", "_large", "_xlarge")
  // _iconName: accept any classname of font from http://fontawesome.io/icons/  eg. 'fa-info-circle'
+ // _position: left, right, top and bottom (Allow yo to select the position of icon
  ```
  - example 
  
   ```
-  _ErrIcon($("input"), 'fa-info-circle', "24px", "blue");
-  _ErrIcon($("input"), 'fa-info-circle', null, "blue");
-  _ErrIcon($("input"), 'fa-info-circle', "_medium", "blue");
+  _ErrIcon($("input"), 'fa-info-circle', "_medium", "blue", null);
+  _ErrIcon($("input"), 'fa-info-circle', "24px", "blue", null);
+  _ErrIcon($("input"), 'fa-info-circle', null, "blue", "top");
+  _ErrIcon($("input"), 'fa-info-circle', "_medium", "blue", "left");
   ```
  - It will look like this.
  
