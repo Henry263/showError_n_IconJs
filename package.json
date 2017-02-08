@@ -1,0 +1,39 @@
+{
+  "name": "showError_n_IconJs",
+  "version": "1.0.0",
+  "description": "This repo is containing JS library where you can call function or attach method to element to appear the border around the element and icon next to the element.  <br /> ## Purpose of showError_n_iconJs For an example you have some HTML element that is showing an icon and border around the element for validation purpose or for any other purpose you can call the function or method that will apply automatically border and display icon for that element.",
+  "main": "errornicon.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-karma": "^2.0.0",
+    "jasmine": "^2.5.3",
+    "jasmine-core": "^2.5.2",
+    "jasmine-jquery": "^2.1.1",
+    "jasmine-jquery-matchers": "^1.4.2",
+    "karma": "^0.13.0",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.5",
+    "karma-requirejs": "^1.1.0",
+    "requirejs": "^2.3.2"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Henry263/showError_n_IconJs.git"
+  },
+  "keywords": [],
+  "author": "Harshil Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Henry263/showError_n_IconJs/issues"
+  },
+  "homepage": "https://github.com/Henry263/showError_n_IconJs#readme"
+}
